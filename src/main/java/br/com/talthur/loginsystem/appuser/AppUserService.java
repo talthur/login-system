@@ -1,5 +1,6 @@
 package br.com.talthur.loginsystem.appuser;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -13,7 +14,7 @@ import lombok.AllArgsConstructor;
 public class AppUserService implements UserDetailsService{
 	
 	private final static String USER_NOT_FOUND_MSG = "user with email %s not found";
-	private final AppUserRepository appUserRepository = null ;
+	private final AppUserRepository appUserRepository;
 	
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
