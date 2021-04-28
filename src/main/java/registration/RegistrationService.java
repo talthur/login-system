@@ -8,7 +8,7 @@ public class RegistrationService {
 	
 	
 	public static String register(RegistrationRequest request) {
-		return "works";
+		return "it works";
 	}
 
 }
